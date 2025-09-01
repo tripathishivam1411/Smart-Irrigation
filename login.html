@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to access your Phygital FaaS dashboard for smart irrigation">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 data-en="Phygital FaaS Platform" data-hi="फिजिटल फार्मिंग-एज-ए-सर्विस प्लेटफॉर्म">Phygital FaaS Platform</h1>
+    <button id="lang-toggle" onclick="speak('Language switch')">Switch to Hindi</button>
+  </header>
+  <nav>
+    <a href="home.html" data-en="Home" data-hi="होम">Home</a>
+    <a href="services.html" data-en="Services" data-hi="सेवाएं">Services</a>
+    <a href="schemes.html" data-en="Govt Schemes" data-hi="सरकारी योजनाएं">Govt Schemes</a>
+    <a href="resources.html" data-en="Resources" data-hi="संसाधन">Resources</a>
+    <a href="dashboard.html" data-en="Dashboard" data-hi="डैशबोर्ड">Dashboard</a>
+    <a href="about.html" data-en="About/Contact" data-hi="हमारे बारे में/संपर्क">About/Contact</a>
+    <a href="login.html" data-en="Login" data-hi="लॉगिन">Login</a>
+    <a href="blog.html" data-en="Blog" data-hi="ब्लॉग">Blog</a>
+  </nav>
+  <section style="background: url('https://images.unsplash.com/photo-1597843786411-7c3e8b23a7b2') no-repeat center/cover;">
+    <form style="background: #FFF; padding: 20px; border-radius: 8px;">
+      <h2 data-en="Login to Your Dashboard" data-hi="अपने डैशबोर्ड में लॉगिन करें">Login to Your Dashboard</h2>
+      <label data-en="Mobile/Email" data-hi="मोबाइल/ईमेल">Mobile/Email</label>
+      <input type="text" required>
+      <label data-en="Password" data-hi="पासवर्ड">Password</label>
+      <input type="password" required>
+      <button class="button" type="button" onclick="speak('Login successful')">Login</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Phygital FaaS. All rights reserved.</p>
+  </footer>
+</body>
+</html>

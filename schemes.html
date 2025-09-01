@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Government schemes for Malihabad mango farmers to support irrigation and horticulture">
+  <title>Government Schemes</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1 data-en="Phygital FaaS Platform" data-hi="फिजिटल फार्मिंग-एज-ए-सर्विस प्लेटफॉर्म">Automatic Irrigation Platform</h1>
+    <button id="lang-toggle" onclick="speak('Language switch')">Switch to Hindi</button>
+  </header>
+  <nav>
+    <a href="home.html" data-en="Home" data-hi="होम">Home</a>
+    <a href="services.html" data-en="Services" data-hi="सेवाएं">Services</a>
+    <a href="schemes.html" data-en="Govt Schemes" data-hi="सरकारी योजनाएं">Govt Schemes</a>
+    <a href="resources.html" data-en="Resources" data-hi="संसाधन">Resources</a>
+    <a href="dashboard.html" data-en="Dashboard" data-hi="डैशबोर्ड">Dashboard</a>
+    <a href="about.html" data-en="About/Contact" data-hi="हमारे बारे में/संपर्क">About/Contact</a>
+    <a href="login.html" data-en="Login" data-hi="लॉगिन">Login</a>
+    <a href="blog.html" data-en="Blog" data-hi="ब्लॉग">Blog</a>
+  </nav>
+  <section>
+    <h2 data-en="Government Schemes for Mango Farmers" data-hi="आम किसानों के लिए सरकारी योजनाएं">Government Schemes for Mango Farmers</h2>
+    <p data-en="Access subsidies and support to enhance irrigation and orchard productivity with government-backed schemes." data-hi="सरकारी योजनाओं के साथ सिंचाई और बाग की उत्पादकता बढ़ाने के लिए सब्सिडी और समर्थन प्राप्त करें।">Access subsidies and support to enhance irrigation...</p>
+    <table>
+      <thead>
+        <tr>
+          <th data-en="Scheme Name" data-hi="योजना का नाम">Scheme Name</th>
+          <th data-en="Description" data-hi="विवरण">Description</th>
+          <th data-en="Eligibility" data-hi="पात्रता">Eligibility</th>
+          <th data-en="Subsidy" data-hi="सब्सिडी">Subsidy</th>
+          <th data-en="Example Benefit" data-hi="उदाहरण लाभ">Example Benefit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-en="Phalpatti Vikas Yojana" data-hi="फलपट्टी विकास योजना">Phalpatti Vikas Yojana</td>
+          <td data-en="Subsidies for expanding mango orchards" data-hi="आम बागों के विस्तार के लिए सब्सिडी">Subsidies for expanding mango orchards</td>
+          <td data-en="Farmers in Uttar Pradesh" data-hi="उत्तर प्रदेश में किसान">Farmers in Uttar Pradesh</td>
+          <td data-en="Rs. 9840/ha" data-hi="आरएस. 9840/हेक्टेयर">Rs. 9840/ha</td>
+          <td data-en="Cost reduced from Rs. 20,000/ha to Rs. 10,400" data-hi="लागत आरएस. 20,000/हेक्टेयर से घटकर आरएस. 10,400">Cost reduced from Rs. 20,000/ha to Rs. 10,400</td>
+        </tr>
+        <tr>
+          <td data-en="PM Krishi Sinchayee Yojana (PMKSY)" data-hi="प्रधान मंत्री कृषि सिंचाई योजना (PMKSY)">PM Krishi Sinchayee Yojana (PMKSY)</td>
+          <td data-en="Support for micro-irrigation systems" data-hi="माइक्रो-सिंचाई सिस्टम के लिए समर्थन">Support for micro-irrigation systems</td>
+          <td data-en="All farmers" data-hi="सभी किसान">All farmers</td>
+          <td data-en="50-60%" data-hi="50-60%">50-60%</td>
+          <td data-en="Sprinkler setup cost: Rs. 40,000 to Rs. 16,000" data-hi="स्प्रिंकलर सेटअप लागत: आरएस. 40,000 से आरएस. 16,000">Sprinkler setup cost: Rs. 40,000 to Rs. 16,000</td>
+        </tr>
+        <tr>
+          <td data-en="PM-KUSUM" data-hi="PM-KUSUM">PM-KUSUM</td>
+          <td data-en="Subsidies for solar pumps" data-hi="सौर पंपों के लिए सब्सिडी">Subsidies for solar pumps</td>
+          <td data-en="Farmers with land" data-hi="भूमि वाले किसान">Farmers with land</td>
+          <td data-en="80-90%" data-hi="80-90%">80-90%</td>
+          <td data-en="Solar pump: Rs. 1,00,000 to Rs. 10,000" data-hi="सौर पंप: आरएस. 1,00,000 से आरएस. 10,000">Solar pump: Rs. 1,00,000 to Rs. 10,000</td>
+        </tr>
+      </tbody>
+    </table>
+    <section>
+      <h3 data-en="Subsidy Calculator" data-hi="सब्सिडी कैलकुलेटर">Subsidy Calculator</h3>
+      <input id="cost" type="number" placeholder="Item Cost / आइटम लागत">
+      <input id="percent" type="number" placeholder="Subsidy % / सब्सिडी %">
+      <button onclick="calculate()">Calculate / गणना करें</button>
+      <p id="result"></p>
+    </section>
+  </section>
+  <script>
+    function calculate() {
+      const cost = document.getElementById('cost').value;
+      const percent = document.getElementById('percent').value;
+      const reduced = cost - (cost * (percent / 100));
+      document.getElementById('result').innerHTML = `<span data-en="Reduced Price: Rs. ${reduced}" data-hi="कम कीमत: आरएस. ${reduced}">Reduced Price: Rs. ${reduced}</span>`;
+      speak(`Reduced Price: Rs. ${reduced}`);
+    }
+  </script>
+  <footer>
+    <p>&copy; 2025 Automatic Irrigation. All rights reserved.</p>
+  </footer>
+</body>
+</html>

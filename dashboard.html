@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real-time dashboard for Malihabad farmers to monitor irrigation and farm health">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1 data-en="Phygital FaaS Platform" data-hi="फिजिटल फार्मिंग-एज-ए-सर्विस प्लेटफॉर्म">Automatic Irrigation Platform</h1>
+    <button id="lang-toggle" onclick="speak('Language switch')">Switch to Hindi</button>
+  </header>
+  <nav>
+    <a href="home.html" data-en="Home" data-hi="होम">Home</a>
+    <a href="services.html" data-en="Services" data-hi="सेवाएं">Services</a>
+    <a href="schemes.html" data-en="Govt Schemes" data-hi="सरकारी योजनाएं">Govt Schemes</a>
+    <a href="resources.html" data-en="Resources" data-hi="संसाधन">Resources</a>
+    <a href="dashboard.html" data-en="Dashboard" data-hi="डैशबोर्ड">Dashboard</a>
+    <a href="about.html" data-en="About/Contact" data-hi="हमारे बारे में/संपर्क">About/Contact</a>
+    <a href="login.html" data-en="Login" data-hi="लॉगिन">Login</a>
+    <a href="blog.html" data-en="Blog" data-hi="ब्लॉग">Blog</a>
+  </nav>
+  <section>
+    <h2 data-en="Your Farm Dashboard" data-hi="आपका खेत डैशबोर्ड">Your Farm Dashboard</h2>
+    <center><p data-en="Monitor soil moisture, weather alerts, and subscriptions in real-time." 
+    data-hi="वास्तविक समय में मिट्टी की नमी, मौसम अलर्ट और सदस्यताओं की निगरानी करें।">Monitor soil moisture, weather alerts, and subscriptions...</p></center>
+    <div style="background: #E8F5E9; border-left: 4px solid #32CD32;">
+      <i class="fas fa-tint" style="color: green;"></i>
+      <p data-en="Soil Moisture: Optimal" data-hi="मिट्टी की नमी: इष्टतम">Soil Moisture: Optimal</p>
+      <canvas id="moistureChart"></canvas>
+    </div>
+    <div style="background: #E8F5E9;">
+      <i class="fas fa-cloud-rain" style="color: red;"></i>
+      <p data-en="Weather Alert: Rain Expected in 24 Hours" data-hi="मौसम अलर्ट: 24 घंटे में बारिश की उम्मीद">Weather Alert: Rain Expected in 24 Hours</p>
+      <img src="weather alert2.jpg" alt="Weather monitoring for orchards" data-hi="बागों के लिए मौसम निगरानी" loading="lazy">
+      <img src="weather alert3.jpg" alt="Weather monitoring for orchards" data-hi="बागों के लिए मौसम निगरानी" loading="lazy">
+      <img src="weather alert4.jpg" alt="Weather monitoring for orchards" data-hi="बागों के लिए मौसम निगरानी" loading="lazy">
+      <img src="weather monitering.jpg" alt="Weather monitoring for orchards" data-hi="बागों के लिए मौसम निगरानी" loading="lazy">
+
+    </div>
+    
+    <section data-en="Your Subscriptions" data-hi="आपकी सदस्यताएं">
+      <table border="1">
+  <tr>
+    <th>Smart Irrigation Tools</th>
+    <th>Price (₹)</th>
+  </tr>
+  <tr>
+    <td>Smart Drip Irrigation System</td>
+    <td>23000</td>
+  </tr>
+  <tr>
+    <td>Smart Sprinkler Controller</td>
+    <td>4999</td>
+  </tr>
+  <tr>
+    <td>Rain Detection Module</td>
+    <td>2999</td>
+  </tr>
+  <tr>
+    <td>INKBIRD Smart Sprinkler</td>
+    <td>2599</td>
+  </tr>
+</table>
+
+      <button class="button" onclick="speak('Manage payment')">Manage Payment</button>
+    </section>
+    <button class="button" onclick="alert('Chat with KVK expert (simulation)'); speak('Support chat')">Chat Support</button>
+  </section>
+  <script>
+    const ctx = document.getElementById('moistureChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Mon', 'Tue', 'Wed'],
+        datasets: [{
+          label: 'Soil Moisture (%)',
+          data: [65, 59, 70],
+          borderColor: '#32CD32',
+          backgroundColor: 'rgba(50, 205, 50, 0.2)',
+        }]
+      },
+      options: { responsive: true }
+    });
+  </script>
+  <footer>
+    <p>&copy; 2025 Automatic Irrigation. All rights reserved.</p>
+  </footer>
+</body>
+</html>
